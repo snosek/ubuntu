@@ -1,0 +1,31 @@
+pageInfo:
+  title: My Dashboard
+  description: My self-hosted services
+
+sections:
+  - name: System
+    icon: fas fa-network-wired
+    items:
+      - title: Pi-hole
+        description: Ad-blocking DNS server
+        icon: si-pihole
+        url: http://pihole.home/admin
+      - title: Nginx Proxy Manager
+        description: Proxy manager
+        icon: si-nginx
+        url: http://proxy.home
+      - title: Dozzle
+        description: Docker dashboard
+        icon: si-docker
+        url: http://docker.home
+  - name: Services
+    icon: fas fa-bong
+    items:
+      - title: Calibre
+        description: Calibre book library
+        icon: si-bookstack
+        url: http://books.home
+      - title: Navidrome
+        description: Navidrome music library
+        icon: si-applemusic
+        url: http://music.home

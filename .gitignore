@@ -1,0 +1,11 @@
+services/calibre-web/data
+services/calibre-web/library
+
+services/navidrome/data
+
+system/nginx-proxy-manager/data
+system/nginx-proxy-manager/letsencrypt
+
+system/pihole/etc-dnsmasq.d
+system/pihole/etc-pihole
+system/pihole/.env

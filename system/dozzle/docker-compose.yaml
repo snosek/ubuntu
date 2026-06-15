@@ -1,0 +1,16 @@
+version: "3"
+services:
+  dozzle:
+    container_name: dozzle
+    image: amir20/dozzle:latest
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - 10000:8080
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: true

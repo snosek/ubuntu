@@ -1,0 +1,15 @@
+services:
+  dashy:
+    image: lissy93/dashy:latest
+    container_name: dashy
+    restart: unless-stopped
+    ports:
+      - "4000:8080"
+    volumes:
+      - /home/snosek/stack/services/dashy/data:/app/user-data:rw
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: true

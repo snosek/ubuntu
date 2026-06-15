@@ -1,0 +1,27 @@
+services:
+  pihole:
+    image: pihole/pihole:2026.05.0
+    container_name: pihole
+    hostname: pihole
+    restart: unless-stopped
+
+    environment:
+      TZ: "Europe/Warsaw"
+      WEBPASSWORD: ${PIHOLE_WEB_PASSWORD}
+      DNSMASQ_LISTENING: "all"
+
+    volumes:
+      - /home/snosek/stack/system/pihole/etc-pihole:/etc/pihole
+      - /home/snosek/stack/system/pihole/etc-dnsmasq.d:/etc/dnsmasq.d
+
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8082:80/tcp"
+
+    networks:
+      - internal
+
+networks:
+  internal:
+    external: true
