@@ -3,6 +3,8 @@ services/calibre-web/library
 
 services/navidrome/data
 
+services/homepage/config
+
 system/nginx-proxy-manager/data
 system/nginx-proxy-manager/letsencrypt
 
